@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="270" height="262" viewBox="0 0 270 262">
+<defs>
+  <linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#1C3C3C"/><stop offset="1" stop-color="#6366F1"/></linearGradient>
+  <clipPath id="c"><rect x="1" y="1" width="268" height="260" rx="14"/></clipPath>
+</defs>
+<rect x="1" y="1" width="268" height="260" rx="14" fill="#ffffff" stroke="#d0d7de"/>
+<rect x="0" y="0" width="270" height="5" fill="url(#g)" clip-path="url(#c)"/>
+<rect x="20" y="22" width="44.0" height="24" rx="12" fill="#1F883D" stroke="none"/><text x="42.0" y="38.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" font-size="12" font-weight="600" fill="#ffffff" text-anchor="middle">완료</text>
+<text x="20" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" font-size="18" font-weight="700" fill="#1f2328" text-anchor="start">Dev Docs RAG Agent</text>
+<text x="20" y="106" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" font-size="13.5" font-weight="500" fill="#424a53" text-anchor="start">질문을 보고 검색이 필요한지</text>
+<text x="20" y="126" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" font-size="13.5" font-weight="500" fill="#424a53" text-anchor="start">스스로 판단하는 RAG 에이전트</text>
+<circle cx="23" cy="160" r="2.5" fill="#6366F1"/>
+<text x="33" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" font-size="12.5" font-weight="500" fill="#656d76" text-anchor="start">judge → search → generate</text>
+<circle cx="23" cy="182" r="2.5" fill="#6366F1"/>
+<text x="33" y="186" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" font-size="12.5" font-weight="500" fill="#656d76" text-anchor="start">LLM 3종 전환 · LangSmith 평가</text>
+<rect x="20" y="216" width="60.1" height="24" rx="12" fill="#f6f8fa" stroke="#d0d7de"/><text x="50.040000000000006" y="232.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" font-size="12" font-weight="600" fill="#424a53" text-anchor="middle">Python</text><rect x="88.08000000000001" y="216" width="80.7" height="24" rx="12" fill="#f6f8fa" stroke="#d0d7de"/><text x="128.44" y="232.5" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Apple SD Gothic Neo', 'Malgun Gothic', 'Noto Sans KR', sans-serif" font-size="12" font-weight="600" fill="#424a53" text-anchor="middle">LangGraph</text>
+</svg>
