@@ -1,6 +1,6 @@
 # 김동욱
 
-Python으로 LLM 애플리케이션을 만든다. 카카오테크 부트캠프 4기 AI 과정에서 RAG와 LangGraph를 공부하고 있고, 지금은 팀 프로젝트 KGB에서 AI 서버를 맡고 있다.
+Python으로 LLM 애플리케이션을 만든다. 카카오테크 부트캠프 4기 AI 과정에서 RAG와 LangGraph를 공부하고 있고, 지금은 팀 프로젝트 KGB에서 AI를 맡고 있다.
 
 프레임워크를 쓰기 전에 그게 무엇을 대체하는지 먼저 알고 싶어서, 같은 RAG를 순수 Python, LangChain, LangGraph 순서로 세 번 다시 만들어 봤다. 5월부터 배운 내용을 TIL로 남겨 42편을 썼고, 그 TIL이 내 RAG 프로젝트들의 데이터가 됐다.
 
