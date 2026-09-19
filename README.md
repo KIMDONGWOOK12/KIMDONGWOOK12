@@ -49,7 +49,7 @@ TIL 42편을 지식 베이스로 삼는 질의응답 시스템. 같은 파이프
 
 <img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" />
 
-### [CLI Quiz](https://github.com/KIMDONGWOOK12/KTB4-Orbit-AI)
+### [CLI Quiz](https://github.com/KIMDONGWOOK12/KTB4-Orbit-AI/tree/main/%EA%B3%BC%EC%A0%9C)
 
 부트캠프 위클리 챌린지 1주차. 배운 개발 용어로 퀴즈를 내고, asyncio로 문제마다 10초 제한을 걸어 틀린 문제는 오답노트에 자동으로 쌓는다.
 
