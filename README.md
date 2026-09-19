@@ -17,13 +17,7 @@ Python으로 LLM 애플리케이션을 만든다. 카카오테크 부트캠프 4
 
 ### [KGB, Korean-culture Guide Book](https://github.com/100-hours-a-week/KTB4-10th-wiki/wiki) (2026.08 ~ 진행 중)
 
-카카오테크 부트캠프 6인 팀 프로젝트. 취향과 여행 조건에 맞춰 장소와 행사를 한 권의 가이드북으로 만들어 주는 여행 서비스다. AI 파트에서 장소 추천 노드와 TourAPI 연동을 맡고 있다. 장소는 TourAPI 실데이터에서 고르고 문장만 LLM이 쓰게 해서, 지도에 없는 장소가 나오지 않게 하는 게 핵심이다.
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" /> <img src="https://img.shields.io/badge/TourAPI-0A66C2?style=flat-square" />
-
-<p align="center"><img src="https://raw.githubusercontent.com/wiki/100-hours-a-week/KTB4-10th-wiki/images/KGB_V1_3.png" width="620" alt="KGB V1 인프라 구성도" /><br/><sub>KGB V1 인프라 구성도 (클라우드 파트 작성). AI 서버는 오른쪽 AI EC2</sub></p>
-
-[팀 위키](https://github.com/100-hours-a-week/KTB4-10th-wiki/wiki) / [AI 설계 위키](https://github.com/100-hours-a-week/KTB4-10th-AI/wiki) / [AI 레포](https://github.com/100-hours-a-week/KTB4-10th-AI)
+카카오테크 부트캠프 6인 팀 프로젝트에서 AI를 맡고 있다.
 
 ### [Orbit](https://github.com/KIMDONGWOOK12/Orbit)
 
