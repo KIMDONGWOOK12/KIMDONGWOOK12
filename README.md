@@ -1,61 +1,60 @@
+<div align="center">
+
 # 김동욱
 
-Python으로 LLM 애플리케이션을 만든다. 카카오테크 부트캠프 4기 AI 과정에서 RAG와 LangGraph를 공부하고 있고, 지금은 팀 프로젝트 KGB에서 AI를 맡고 있다.
+Python · LLM · 모델 학습
 
-프레임워크를 쓰기 전에 그게 무엇을 대체하는지 먼저 알고 싶어서, 같은 RAG를 순수 Python, LangChain, LangGraph 순서로 세 번 다시 만들어 봤다. 5월부터 배운 내용을 TIL로 남겨 42편을 썼고, 그 TIL이 내 RAG 프로젝트들의 데이터가 됐다.
+Sonnet이 쓰던 글을 8B 모델이 대신 쓰게 학습시키고 있다.
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" /> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" /> <img src="https://img.shields.io/badge/LangSmith-1C3C3C?style=flat-square" /> <img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=flat-square" /> <img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" /> <img src="https://img.shields.io/badge/vLLM-30A2FF?style=flat-square" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/AWS%20EC2-FF9900?style=flat-square" /> <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+카카오테크 부트캠프 4기 AI 과정<br>
+<sub>2026.05 ~ 진행 중</sub>
+
+</div>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KIMDONGWOOK12/KIMDONGWOOK12/main/dist/defense-dark.svg">
   <img alt="Contribution Defense" src="https://raw.githubusercontent.com/KIMDONGWOOK12/KIMDONGWOOK12/main/dist/defense-light.svg" width="100%">
 </picture>
 
-<br/>
+## Tech Stack
+
+서비스
+
+<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/AWS%20EC2-FF9900?style=flat-square" /> <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white" />
+
+LLM
+
+<img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" /> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" /> <img src="https://img.shields.io/badge/LangSmith-1C3C3C?style=flat-square" /> <img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=flat-square" /> <img src="https://img.shields.io/badge/MCP-1C3C3C?style=flat-square" />
+
+모델 학습 · 서빙
+
+<img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" /> <img src="https://img.shields.io/badge/PEFT%20LoRA-6366F1?style=flat-square" /> <img src="https://img.shields.io/badge/vLLM-30A2FF?style=flat-square" /> <img src="https://img.shields.io/badge/RunPod-673AB7?style=flat-square" />
 
 ## 팀 프로젝트
 
-### [KGB, Korean-culture Guide Book](https://github.com/100-hours-a-week/KTB4-10th-wiki/wiki) (2026.08 ~ 진행 중)
+### [KGB, Korean-culture Guide Book](https://kguidebook.site/about)
 
-카카오테크 부트캠프 6인 팀 프로젝트에서 AI를 맡고 있다.
+`2026.08 ~ 진행 중` `6인 팀 · AI 담당`
+
+AI 여행 가이드북 서비스. AI 팀 두 명 중 한 명이고, 장소 추천과 가이드북 글을 맡았다. 글은 처음에 Sonnet으로 썼는데 비용도 들고 응답도 느려서, 같은 글을 쓰는 모델을 직접 학습하기로 했다.
+
+kanana-1.5-8b를 bf16 LoRA로 일곱 번 학습했다. TRL은 안 쓰고 transformers Trainer와 peft로 SFT를 짰다. 데이터는 train 2,206건에 test 200건. 학습 전 22%였던 자동 검사 통과율이 v7에서 81%가 됐고, GPT 심판으로 같은 입력을 비교하면 Sonnet 대비 74%에서 84%까지 올라왔다. 가장 크게 바뀐 건 장소 개요를 입력에 넣었을 때다. 글의 구체성 점수가 1.80에서 3.96으로 두 배 넘게 뛰었다.
+
+RunPod L4에서 재 보니 비용은 Sonnet의 7~25%, 첫 토큰까지는 1.94초였다. 모델은 Hugging Face [orbit01/kgb-writer-v7](https://huggingface.co/orbit01/kgb-writer-v7)에, 학습 코드는 [팀 레포](https://github.com/100-hours-a-week/KTB4-10th-AI)에 올려 뒀다.
 
 ### [Orbit](https://github.com/KIMDONGWOOK12/Orbit)
 
 4명이 만든 SNS 백엔드. FastAPI로 계층을 나누고 회원가입과 로그인(bcrypt, JWT)을 구현했다.
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/SQLAlchemy-D71F00?style=flat-square&logo=sqlalchemy&logoColor=white" /> <img src="https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" />
-
-<br/>
-
 ## 개인 프로젝트
 
-### [TIL-RAG](https://github.com/KIMDONGWOOK12/til-rag)
+### [job-radar](https://github.com/KIMDONGWOOK12/job-radar)
 
-TIL 42편을 지식 베이스로 삼는 질의응답 시스템. 같은 파이프라인을 순수 Python으로 `retrieve()`와 `generate()`부터 직접 짜고, LangChain 체인으로 옮긴 뒤, 조건 분기와 재시도가 필요한 지점에서 LangGraph ReAct Agent로 바꿨다.
+`2026.11` `Claude Code 플러그인`
 
-이후 GitHub PR 리뷰 6,529개로 Qwen2.5-Coder-7B를 QLoRA 파인튜닝하고 vLLM으로 서빙해서 코드 리뷰까지 확장했다. 7번을 다시 학습하면서 데이터 양보다 베이스 모델의 사전 지식이 더 크게 작용한다는 걸 확인했다. 작은 모델은 같은 코드에도 답이 매번 달라서, Claude가 답을 검증하고 세 번 실패하면 솔직하게 실패를 알리도록 했다. Docker로 묶어 EC2에 올리고 GitHub Actions로 배포를 자동화했다.
+취업 준비하면서 채용 사이트를 매일 돌아보는 게 귀찮아서 만들었다. 직무와 연차를 한 번 알려 주면 대기업, 중견, 강소, 공기업 채용 페이지를 돌면서 맞는 공고만 노션 DB에 넣어 준다. 이미 넣은 공고는 건너뛰고, 마감된 공고는 알아서 지운다.
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" /> <img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=flat-square" /> <img src="https://img.shields.io/badge/QLoRA-6366F1?style=flat-square" /> <img src="https://img.shields.io/badge/vLLM-30A2FF?style=flat-square" /> <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" /> <img src="https://img.shields.io/badge/AWS%20EC2-FF9900?style=flat-square" />
-
-### [Dev Docs RAG Agent](https://github.com/KIMDONGWOOK12/dev-docs-rag-agent)
-
-질문을 보고 검색이 필요한지부터 판단하는 LangGraph 에이전트. "LCEL이 뭐야?"는 TIL을 검색해서 답하고, "안녕하세요"는 검색 없이 바로 답한다. LangSmith로 키워드 매칭과 LLM-as-Judge를 비교해 보니, "State/Node/Edge"와 "노드/엣지"처럼 표현만 다른 정답을 키워드 매칭은 0점으로 처리했다.
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" /> <img src="https://img.shields.io/badge/LangSmith-1C3C3C?style=flat-square" /> <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-
-### [Orbit-ChatBot](https://github.com/KIMDONGWOOK12/Orbit-ChatBot) (진행 중)
-
-개발 문서로 답하는 RAG 챗봇. 직접 학습시킨 miniGPT(33.6M)를 생성 모델로 붙이는 게 목표다.
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" /> <img src="https://img.shields.io/badge/LangChain-1C3C3C?style=flat-square&logo=langchain&logoColor=white" /> <img src="https://img.shields.io/badge/LangGraph-1C3C3C?style=flat-square&logo=langgraph&logoColor=white" />
-
-### [CLI Quiz](https://github.com/KIMDONGWOOK12/KTB4-Orbit-AI/tree/main/%EA%B3%BC%EC%A0%9C)
-
-부트캠프 위클리 챌린지 1주차. 배운 개발 용어로 퀴즈를 내고, asyncio로 문제마다 10초 제한을 걸어 틀린 문제는 오답노트에 자동으로 쌓는다.
-
-<img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />
-
-<br/>
+회사는 2026년 공정위 공시대상기업집단 102개를 기준으로 잡아서 지금 115곳 정도를 본다. 그리팅, 마이다스, Greenhouse, 잡알리오, 삼성·CJ·네이버·카카오·토스 채용 사이트에서 공고를 가져오는 MCP 서버는 Python으로 짰고, 공고 본문까지 읽어서 자격 요건의 연차를 확인한다.
 
 ## 경력과 활동
 
