@@ -42,10 +42,6 @@ kanana-1.5-8b를 bf16 LoRA로 일곱 번 학습했다. TRL은 안 쓰고 transfo
 
 RunPod L4에서 재 보니 비용은 Sonnet의 7~25%, 첫 토큰까지는 1.94초였다. 모델은 Hugging Face [orbit01/kgb-writer-v7](https://huggingface.co/orbit01/kgb-writer-v7)에, 학습 코드는 [팀 레포](https://github.com/100-hours-a-week/KTB4-10th-AI)에 올려 뒀다.
 
-### [Orbit](https://github.com/KIMDONGWOOK12/Orbit)
-
-4명이 만든 SNS 백엔드. FastAPI로 계층을 나누고 회원가입과 로그인(bcrypt, JWT)을 구현했다.
-
 ## 개인 프로젝트
 
 ### [job-radar](https://github.com/KIMDONGWOOK12/job-radar)
@@ -56,10 +52,26 @@ RunPod L4에서 재 보니 비용은 Sonnet의 7~25%, 첫 토큰까지는 1.94�
 
 회사는 2026년 공정위 공시대상기업집단 102개를 기준으로 잡아서 지금 115곳 정도를 본다. 그리팅, 마이다스, Greenhouse, 잡알리오, 삼성·CJ·네이버·카카오·토스 채용 사이트에서 공고를 가져오는 MCP 서버는 Python으로 짰고, 공고 본문까지 읽어서 자격 요건의 연차를 확인한다.
 
+### [til-rag](https://github.com/KIMDONGWOOK12/til-rag)
+
+`2026.07 ~ 2026.08` `RAG · LangChain · LangGraph`
+
+부트캠프 동안 쓴 TIL 마크다운 42개를 검색해서 질문에 답하는 RAG다. 순수 Python으로 검색과 생성을 직접 짠 다음, 같은 걸 LangChain으로 한 번, LangGraph로 한 번 더 만들었다. 프레임워크가 대신 해 주는 일이 뭔지 보고 싶었다. LangGraph 버전은 검색이 필요한지를 LLM이 판단하고, 필요할 때만 검색 도구를 부른다. "오늘 너무 힘들고 피곤했다" 같은 문장은 키워드 규칙으로는 가릴 수가 없었다.
+
+나중에 코드 리뷰를 붙였다. Python 저장소 15개에서 PR 리뷰 6,529개를 모아 Qwen2.5-Coder-7B를 QLoRA로 학습하고 vLLM으로 띄웠다. 학습은 일곱 번 했는데, 범용 7B 모델은 데이터를 늘려도 SQL 인젝션을 잘 못 잡다가 Coder 모델로 바꾸니 잡았다. 7B 모델 리뷰를 그대로 내보내기엔 불안해서 Claude가 한 번 보고, 아니다 싶으면 세 번까지 다시 쓰게 했다. 서버는 FastAPI로 만들어 Docker와 GitHub Actions로 EC2에 올렸다.
+
+## 인턴
+
+### 디메타(Dimeta) AI 개발팀
+
+`2026.02 ~ 2026.03`
+
+영상 비전 모델 학습 데이터를 라벨링하고 정제했다. Agent AI 리서치 세미나에도 참여했다.
+
 ## 경력과 활동
 
 - 2026.05 ~ 현재　카카오테크 부트캠프 4기 AI 과정
-- 2026.02 ~ 2026.03　디메타(Dimeta) AI 개발팀 인턴. 영상 비전 모델 학습 데이터 라벨링과 정제, Agent AI 리서치 세미나
+- 2026.02 ~ 2026.03　디메타(Dimeta) AI 개발팀 인턴
 - 2024 ~ 2025　AI컴퓨터공학과 학회장 (2년)
 - AI컴퓨터공학과 전공
 
