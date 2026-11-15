@@ -28,7 +28,7 @@ LLM
 
 모델 학습 · 서빙
 
-<img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" /> <img src="https://img.shields.io/badge/PEFT%20LoRA-6366F1?style=flat-square" /> <img src="https://img.shields.io/badge/vLLM-30A2FF?style=flat-square" /> <img src="https://img.shields.io/badge/RunPod-673AB7?style=flat-square" />
+<a href="https://huggingface.co/orbit01"><img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=flat-square&logo=huggingface&logoColor=black" /></a> <img src="https://img.shields.io/badge/PEFT%20LoRA-6366F1?style=flat-square" /> <img src="https://img.shields.io/badge/vLLM-30A2FF?style=flat-square" /> <img src="https://img.shields.io/badge/RunPod-673AB7?style=flat-square" />
 
 ## 팀 프로젝트
 
