@@ -2,6 +2,8 @@
 
 # 김동욱
 
+**AI Engineer · AX Engineer**
+
 Python · LLM · 모델 학습
 
 Sonnet이 쓰던 글을 8B 모델이 대신 쓰게 학습시키고 있다.
